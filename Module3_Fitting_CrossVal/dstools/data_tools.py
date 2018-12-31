@@ -6,7 +6,7 @@ import matplotlib.pylab as plt
 def Decision_Surface(data, target, model, surface=True, probabilities=False, cell_size=.01):
     '''
     This function creates the surface of a decision tree using the data created with this script. 
-    You can change this function tu plot any column of any dataframe. 
+    You can change this function to plot any column of any dataframe. 
     
     INPUT: data (created with data_tools.X() ),
             target (Y value creted with data_tools.create_data() ),

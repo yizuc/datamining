@@ -19,4 +19,4 @@ Prof. Foster Provost - NYU Stern School of Business [Website](http://people.ster
 
 Carlos Fernandez [Contact](https://www.linkedin.com/in/ferlocar/)
 
-Initial fork from Maria Leonor Zamora Maass [Github link](https://github.com/mariazm/Spring2017_ProfFosterProvost)
+Most of the examples and code in here come from Maria Leonor Zamora Maass [Github link](https://github.com/mariazm/Spring2017_ProfFosterProvost)
