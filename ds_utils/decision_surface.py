@@ -10,7 +10,7 @@ def Decision_Surface(data, col1, col2, target, model, probabilities=False, grids
     np.random.seed(seed)
     indices = np.random.permutation(range(len(target)))[:int(sample*len(target))].tolist()
     data = data.iloc[indices]
-    target = target[indices]
+    target = target.iloc[indices]
     # Get bounds
     x_min, x_max = data[col1].min(), data[col1].max()
     y_min, y_max = data[col2].min(), data[col2].max()
