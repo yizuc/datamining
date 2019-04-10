@@ -122,3 +122,28 @@ def get_mailing_data():
     X = pipeline.fit_transform(mailing_df)
 
     return X, mailing_df["class"]
+
+def get_project_data():
+    n_projects = 1000000
+    np.random.seed(0)
+    # Generate project attributes
+    new_c = np.array(['Old', 'New'])[np.random.binomial(1, 0.5, n_projects)]
+    new_s = np.array(['Old', 'New'])[np.random.binomial(1, 0.5, n_projects)]
+    large_p = np.array(['Small', 'Large'])[np.random.binomial(1, 0.5, n_projects)]
+    # Assign manager
+    prob_table1 = {'Old': {'Old': {'Small': 0.1, 'Large': 0.1},
+                           'New': {'Small': 0.9, 'Large': 0.1}},
+                   'New': {'Old': {'Small': 0.9, 'Large': 0.1},
+                           'New': {'Small': 0.9, 'Large': 0.9}}}
+    probs_b = [prob_table1[new_c[i]][new_s[i]][large_p[i]] for i in range(n_projects)]
+    manager_b = np.array(['Aaron', 'Ben'])[np.random.binomial(1, probs_b)]
+    # Build data frame
+    data = {"Manager": manager_b, "Customer": new_c, "Project": large_p, "Service": new_s}
+    data = pd.DataFrame(data)
+    data = data.groupby(['Manager', 'Customer', 'Service', 'Project']).apply(lambda x: x.sample(frac=.0001))
+    data = data.reset_index(drop=True).sample(frac=1)
+    # Obtain performance
+    performance = (data.Customer == 'New')*-4 + (data.Project == 'Large')*-3 + (data.Service == 'New')*-1
+    performance += -performance.min() + 1 
+    data['Performance'] = performance / performance.max()   
+    return data
