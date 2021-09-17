@@ -1,11 +1,6 @@
 ## Introduction
 
-This repository includes 8 modules with Ipython Notebooks created for the Introduction to Data Science Class (NYU Stern School of Business, Spring 2019). Each module includes data, code and description of each task within the Data Science Framework.
-
-
-## Motivation
-
-The creation and maintenance of this project attempts to show the work that can be done to solve different Data Science and Data Mining problems. 
+This repository includes 8 modules with Ipython Notebooks Based on Material originally created by Prof. Foster Provost (NYU Stern School of Business), Carlos Fernandez and Maria Leonor Zamora Maass. Each module includes data, code and description of each task within the Data Science Framework.
 
 
 ## Installation
