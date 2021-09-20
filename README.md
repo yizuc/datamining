@@ -1,6 +1,7 @@
 ## Introduction
 
-This repository includes 8 modules with Ipython Notebooks Based on Material originally created by Prof. Foster Provost (NYU Stern School of Business), Carlos Fernandez and Maria Leonor Zamora Maass. Each module includes data, code and description of each task within the Data Science Framework.
+This repository includes 8 modules with Ipython Notebooks for in class excercises at https://colab.research.google.com/
+This repository are based on Material originally created by Prof. Foster Provost (NYU Stern School of Business), Carlos Fernandez and Maria Leonor Zamora Maass. Each module includes data, code and description of each task within the Data Science Framework.
 
 
 ## Installation
