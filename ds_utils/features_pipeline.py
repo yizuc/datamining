@@ -9,7 +9,10 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
 
 from sklearn.pipeline import Pipeline, FeatureUnion, make_pipeline
-from sklearn.preprocessing import OneHotEncoder, LabelBinarizer, StandardScaler, PolynomialFeatures, Imputer, MinMaxScaler
+from sklearn.preprocessing import OneHotEncoder, LabelBinarizer, StandardScaler, PolynomialFeatures, MinMaxScaler
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
+
 
 class ItemSelector(BaseEstimator, TransformerMixin):
     def __init__(self, key):
